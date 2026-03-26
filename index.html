@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerasimos Alexiou | Senior Cloud & DevOps Engineer</title>
+    <meta name="description" content="Portfolio of Gerasimos Alexiou - Senior Cloud/DevOps Engineer, Microsoft MVP, and MCT.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        slate: {
+                            850: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+        
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white tracking-tight hover:text-indigo-400 transition-colors">
+                GA<span class="text-indigo-500">.</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                <a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a>
+                <a href="#education" class="hover:text-indigo-400 transition-colors">Education</a>
+                <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">Teaching</a>
+                <a href="#connect" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20">
+                    Connect
+                </a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-indigo-400 uppercase bg-indigo-500/10 rounded-full border border-indigo-500/20">
+                Microsoft MVP, Certified Trainer, Senior DevOps Engineer
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+                Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Gerasimos Alexiou</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Senior Cloud/DevOps Engineer building scalable infrastructure and automating the future.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#experience" class="px-8 py-3 bg-white text-slate-900 font-semibold rounded-lg hover:bg-slate-200 transition-colors shadow-lg shadow-white/10">
+                    View Work
+                </a>
+                <a href="https://blog.geralexgr.com" target="_blank" class="px-8 py-3 border border-slate-700 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors flex items-center justify-center gap-2">
+                    Read Blog <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+            </div>
+            <div class="mt-8 animate-fade-in">
+            <p class="text-slate-500 text-sm mb-2 uppercase tracking-widest font-medium">
+                Need personalized career guidance?
+            </p>
+            <a href="https://www.cal.eu/gerasimos-alexiou-jorq4v" target="_blank" class="group inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-semibold transition-all">
+                Book a private session for tailored advice on Cloud, DevOps, and IT
+                <i class="fas fa-calendar-check group-hover:scale-110 transition-transform"></i>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-indigo-500 rounded-full"></span> About Me
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <div class="md:col-span-1 relative group">
+                    <div class="aspect-square bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-xl relative z-10">
+                        <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-700 text-slate-500">
+                            <i class="fas fa-user text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-indigo-500/20 rounded-2xl blur-xl -z-10 group-hover:bg-indigo-500/30 transition-all duration-500"></div>
+                </div>
+                <div class="md:col-span-2 space-y-6 text-lg text-slate-400">
+                    <p>
+                        I am a <strong class="text-white">Senior Cloud/DevOps Engineer</strong> based in <span class="text-white">Athens, Greece</span> with a passion for automation and cloud infrastructure. I specialize in Cloud, IAC, CI/CD.
+                    </p>
+                    <p>
+                        Beyond my daily work, I am a <strong class="text-white">Microsoft MVP</strong> and a <strong class="text-white">Microsoft Certified Trainer</strong>. I love sharing knowledge through my technology blog (300k+ views), Udemy courses, and YouTube channel.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-map-marker-alt text-indigo-400"></i> Athens, Greece
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-slate-300">
+                            <i class="fas fa-envelope text-indigo-400"></i> geralexgr.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="pt-24 pb-0">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-indigo-500 rounded-full"></span> Experience
+            </h2>
+            
+            <div class="space-y-12 border-l-2 border-slate-800 ml-3 pl-8 relative">
+                
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-950 border-2 border-indigo-500 rounded-full group-hover:bg-indigo-500 transition-colors"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Senior Cloud/DevOps Engineer</h3>
+                        <span class="text-sm font-mono text-slate-500">Oct 2023 - Present</span>
+                    </div>
+                    <div class="text-indigo-400 font-medium mb-4">XM</div>
+                    <p class="text-slate-400">Implementing and supporting Cloud Infrastructure serving millions of customers in Forex trading.</p>
+                    <span class="text-xs text-slate-500">#Gitlab CI/CD</span>
+                   <span class="text-xs text-slate-500">#Terraform</span>
+                   <span class="text-xs text-slate-500">#AWS</span>
+                   <span class="text-xs text-slate-500">#Python</span>
+                   <span class="text-xs text-slate-500">#Bash & Scripting</span>
+                   <span class="text-xs text-slate-500">#Serverless solutions</span>
+                   <span class="text-xs text-slate-500">#Troubleshooting</span>
+                </div>
+
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-950 border-2 border-slate-700 rounded-full group-hover:border-indigo-500 group-hover:bg-indigo-500 transition-colors"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Senior DevOps Engineer</h3>
+                        <span class="text-sm font-mono text-slate-500">Feb 2023 - Sep 2023</span>
+                    </div>
+                    <div class="text-indigo-400 font-medium mb-4">The Signal Group</div>
+                    <p class="text-slate-400">Supported Signal Ocean platform with DevOps tools.</p>
+                   <span class="text-xs text-slate-500">#Teamcity</span>
+                   <span class="text-xs text-slate-500">#kubernetes</span>
+                   <span class="text-xs text-slate-500">#Grafana</span>
+                   <span class="text-xs text-slate-500">#Virtual servers, Serverless, Cloud components</span>
+                   <span class="text-xs text-slate-500">#Containers</span>
+                   <span class="text-xs text-slate-500">#Scripting</span>
+                   <span class="text-xs text-slate-500">#Troubleshooting</span>
+                </div>
+
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-950 border-2 border-slate-700 rounded-full group-hover:border-indigo-500 group-hover:bg-indigo-500 transition-colors"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">DevOps Engineer</h3>
+                        <span class="text-sm font-mono text-slate-500">Nov 2021 - Jan 2023</span>
+                    </div>
+                    <div class="text-indigo-400 font-medium mb-4">Viva Wallet</div>
+                    <p class="text-slate-400">Automated procedures for Cloud environments using Azure DevOps, Terraform, and Ansible.</p>
+                   <span class="text-xs text-slate-500">#Azure DevOps</span>
+                   <span class="text-xs text-slate-500">#Terraform</span>
+                   <span class="text-xs text-slate-500">#Ansible</span>
+                   <span class="text-xs text-slate-500">#Virtual servers, Serverless, Cloud components</span>
+                   <span class="text-xs text-slate-500">#Containers</span>
+                   <span class="text-xs text-slate-500">#Powershell</span>
+                   <span class="text-xs text-slate-500">#Troubleshooting</span>
+                </div>
+
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-950 border-2 border-slate-700 rounded-full group-hover:border-indigo-500 group-hover:bg-indigo-500 transition-colors"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">IT Specialist</h3>
+                        <span class="text-sm font-mono text-slate-500">Apr 2018 - Oct 2021</span>
+                    </div>
+                    <div class="text-indigo-400 font-medium mb-4">IBM</div>
+                    <p class="text-slate-400">Supported various systems (Windows, Linux) and virtual infrastructures.</p>
+                   <span class="text-xs text-slate-500">#Windows/Linux</span>
+                   <span class="text-xs text-slate-500">#Ansible</span>
+                   <span class="text-xs text-slate-500">#CI/CD</span>
+                   <span class="text-xs text-slate-500">#VMWare</span>
+                   <span class="text-xs text-slate-500">#Monitoring</span>
+                   <span class="text-xs text-slate-500">#Databases</span>
+                   <span class="text-xs text-slate-500">#Troubleshooting</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <section id="education" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-indigo-500 rounded-full"></span> Education
+            </h2>
+            
+            <div class="space-y-12 border-l-2 border-slate-800 ml-3 pl-8 relative">
+                
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-950 border-2 border-indigo-500 rounded-full group-hover:bg-indigo-500 transition-colors"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Techno Economic Systems</h3>
+                        <span class="text-sm font-mono text-slate-500">2021</span>
+                    </div>
+                    <div class="text-indigo-400 font-medium mb-4">National Technical University of Athens (2021)</div>
+                    <p class="text-slate-400">GPA: 8,01/10</p>
+                </div>
+
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-1 w-5 h-5 bg-slate-950 border-2 border-slate-700 rounded-full group-hover:border-indigo-500 group-hover:bg-indigo-500 transition-colors"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">Bachelor of Science</h3>
+                        <span class="text-sm font-mono text-slate-500">2017</span>
+                    </div>
+                    <div class="text-indigo-400 font-medium mb-4">University of Patras</div>
+                    <p class="text-slate-400">GPA: 7.3/10</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-indigo-500 rounded-full"></span> Technical Skills
+            </h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Azure DevOps</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Terraform</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Kubernetes</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Ansible</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Python</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Bash/Scripting</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Docker</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">AWS</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Azure</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">GitLab/Github</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Linux/Windows</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Monitoring</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">Cloud</span>
+                <span class="px-4 py-2 bg-slate-800 text-indigo-300 rounded-lg text-sm font-medium border border-slate-700 hover:border-indigo-500/50 transition-colors">AI</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="w-8 h-1 bg-indigo-500 rounded-full"></span> Courses & Teaching
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <a href="https://www.udemy.com/course/mastering-azure-devops-cicd-pipelines-with-yaml/" target="_blank" class="block p-6 bg-slate-900 rounded-2xl border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-800/50 transition-all group">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-code text-indigo-500 text-2xl"></i>
+                        <i class="fas fa-arrow-right text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Mastering Azure DevOps CI/CD Pipelines with YAML</h3>
+                    <p class="text-slate-400 text-sm mb-4">Code repository for my Udemy course on Azure DevOps CI/CD pipelines</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs text-slate-500">#AzureDevOps</span>
+                        <span class="text-xs text-slate-500">#YAML</span>
+                        <span class="text-xs text-slate-500">#CI/CD</span>
+                        <span class="text-xs text-slate-500">#Terraform</span>
+                        <span class="text-xs text-slate-500">#IAC</span>
+                    </div>
+                </a>
+
+                <a href="https://www.udemy.com/course/azure-devops-platform-fundamentals-build-cicd-pipelines/" target="_blank" class="block p-6 bg-slate-900 rounded-2xl border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-800/50 transition-all group">
+                    <div class="flex justify-between items-start mb-4">
+                        <i class="fas fa-cloud text-indigo-500 text-2xl"></i>
+                        <i class="fas fa-arrow-right text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Azure DevOps Platform Fundamentals</h3>
+                    <p class="text-slate-400 text-sm mb-4">Build CI/CD pipelines from scratch with Azure DevOps fundamentals</p>
+                    <div class="flex gap-2">
+                        <span class="text-xs text-slate-500">#AzureDevOps</span>
+                        <span class="text-xs text-slate-500">#YAML</span>
+                        <span class="text-xs text-slate-500">#CI/CD</span>
+                        <span class="text-xs text-slate-500">#Beginner</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="connect" class="py-12 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-white mb-8">Let's Connect</h2>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="https://github.com/geralexgr" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 text-slate-400 hover:bg-indigo-600 hover:text-white transition-all text-xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/geralexgr" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 text-slate-400 hover:bg-blue-600 hover:text-white transition-all text-xl">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://twitter.com/geralexgr" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 text-slate-400 hover:bg-sky-500 hover:text-white transition-all text-xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/@geralexgr" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 text-slate-400 hover:bg-red-600 hover:text-white transition-all text-xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://blog.geralexgr.com" target="_blank" class="w-12 h-12 flex items-center justify-center rounded-full bg-slate-900 text-slate-400 hover:bg-orange-500 hover:text-white transition-all text-xl">
+                    <i class="fas fa-rss"></i>
+                </a>
+            </div>
+            <p class="text-slate-600 text-sm">
+                &copy; 2026 Gerasimos Alexiou. Built with <span class="text-indigo-500">Tailwind CSS</span>.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
