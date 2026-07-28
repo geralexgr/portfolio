@@ -31,28 +31,120 @@
         }
     </script>
 
+    <script>
+        /* Applied before first paint so the correct theme renders without a flash. */
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                if (theme === 'light') document.documentElement.classList.add('light');
+            } catch (e) { /* private mode / storage disabled: stay on the dark default */ }
+        })();
+    </script>
+
     <style>
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0f172a; 
+            background: #0f172a;
         }
         ::-webkit-scrollbar-thumb {
-            background: #334155; 
+            background: #334155;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #475569; 
+            background: #475569;
         }
-        
+
         .glass-nav {
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
+        /* =====================================================================
+           LIGHT THEME
+           The markup uses dark slate utilities directly, so light mode remaps
+           those utilities under `html.light`. Two-class selectors outrank
+           Tailwind's single-class rules, so this wins without !important and
+           regardless of stylesheet order (the CDN injects its CSS at runtime).
+           ===================================================================== */
+
+        html.light { color-scheme: light; }
+
+        html.light body,
+        html.light section,
+        html.light footer {
+            transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+        }
+
+        html.light ::-webkit-scrollbar-track { background: #f1f5f9; }
+        html.light ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+        html.light ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        html.light .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        }
+
+        /* --- Surfaces --- */
+        html.light .bg-slate-950 { background-color: #ffffff; }
+        html.light .bg-slate-900 { background-color: #f8fafc; }
+        html.light .bg-slate-800 { background-color: #f1f5f9; }
+        html.light .hover\:bg-slate-800:hover { background-color: #f1f5f9; }
+        html.light .hover\:bg-slate-800\/50:hover { background-color: #f8fafc; }
+
+        /* Cards sit on near-white sections, so lift them with a soft shadow. */
+        html.light .rounded-2xl.border {
+            box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 6px 16px rgba(15, 23, 42, .05);
+        }
+
+        /* --- Text --- */
+        html.light .text-white { color: #0f172a; }
+        html.light .hover\:text-white:hover { color: #0f172a; }
+        html.light .group:hover .group-hover\:text-white { color: #0f172a; }
+        html.light .text-slate-300 { color: #334155; }
+        html.light .text-slate-400 { color: #475569; }
+        html.light .text-slate-500 { color: #64748b; }
+        html.light .text-slate-600 { color: #64748b; }
+
+        /* Indigo is lightened for dark backgrounds; darken it for contrast on white. */
+        html.light .text-indigo-300 { color: #4338ca; }
+        html.light .text-indigo-400 { color: #4f46e5; }
+        html.light .text-indigo-500 { color: #4f46e5; }
+        html.light .hover\:text-indigo-300:hover { color: #3730a3; }
+        html.light .hover\:text-indigo-400:hover { color: #4338ca; }
+        html.light .group:hover .group-hover\:text-indigo-400 { color: #4f46e5; }
+
+        /* --- Borders --- */
+        html.light .border-slate-700 { border-color: #cbd5e1; }
+        html.light .border-slate-800 { border-color: #e2e8f0; }
+        html.light .border-slate-900 { border-color: #e2e8f0; }
+
+        /* --- Accent washes: lighter surfaces need less opacity to read the same --- */
+        html.light .bg-indigo-500\/10 { background-color: rgba(99, 102, 241, .12); }
+        html.light .bg-indigo-600\/20 { background-color: rgba(79, 70, 229, .16); }
+        html.light .bg-indigo-500\/20 { background-color: rgba(99, 102, 241, .18); }
+        html.light .group:hover .group-hover\:bg-indigo-500\/30 { background-color: rgba(99, 102, 241, .28); }
+        html.light .border-indigo-500\/20 { border-color: rgba(99, 102, 241, .35); }
+
+        /* --- Hero: the inverted white CTA flips to dark, gradients get darker stops --- */
+        html.light .bg-white { background-color: #0f172a; }
+        html.light .text-slate-900 { color: #ffffff; }
+        html.light .hover\:bg-slate-200:hover { background-color: #1e293b; }
+        html.light .shadow-white\/10 { --tw-shadow-color: rgba(15, 23, 42, .15); }
+        html.light .from-indigo-400 { --tw-gradient-from: #4f46e5 var(--tw-gradient-from-position); }
+        html.light .to-cyan-400 { --tw-gradient-to: #0891b2 var(--tw-gradient-to-position); }
+        html.light .from-slate-800 { --tw-gradient-from: #f1f5f9 var(--tw-gradient-from-position); }
+        html.light .to-slate-700 { --tw-gradient-to: #e2e8f0 var(--tw-gradient-to-position); }
+
+        /* --- Theme toggle --- */
+        #theme-toggle .icon-sun { display: none; }
+        html.light #theme-toggle .icon-sun { display: inline-block; }
+        html.light #theme-toggle .icon-moon { display: none; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-300 antialiased selection:bg-indigo-500 selection:text-white">
@@ -62,20 +154,27 @@
             <a href="#" class="text-xl font-bold text-white tracking-tight hover:text-indigo-400 transition-colors">
                 GA<span class="text-indigo-500">.</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
-                <a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a>
-                <a href="#education" class="hover:text-indigo-400 transition-colors">Education</a>
-                <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
-                <a href="#teaching" class="hover:text-indigo-400 transition-colors">Teaching</a>
-                <a href="#side-projects" class="hover:text-indigo-400 transition-colors">Projects</a>
-                <a href="#connect" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20">
-                    Connect
-                </a>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+                    <a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a>
+                    <a href="#education" class="hover:text-indigo-400 transition-colors">Education</a>
+                    <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+                    <a href="#teaching" class="hover:text-indigo-400 transition-colors">Teaching</a>
+                    <a href="#side-projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                    <a href="#connect" class="px-4 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-500/20">
+                        Connect
+                    </a>
+                </div>
+                <button id="theme-toggle" type="button" aria-label="Switch colour theme" aria-pressed="false"
+                        class="w-9 h-9 flex items-center justify-center rounded-full border border-slate-700 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
+                    <i class="fas fa-moon icon-moon"></i>
+                    <i class="fas fa-sun icon-sun"></i>
+                </button>
+                <button class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
             </div>
-            <button class="md:hidden text-white focus:outline-none">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
         </div>
     </nav>
 
@@ -392,6 +491,39 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var toggle = document.getElementById('theme-toggle');
+            var media = window.matchMedia('(prefers-color-scheme: light)');
+
+            function sync() {
+                var isLight = root.classList.contains('light');
+                toggle.setAttribute('aria-pressed', String(isLight));
+                toggle.title = isLight ? 'Switch to dark theme' : 'Switch to light theme';
+            }
+
+            toggle.addEventListener('click', function () {
+                var isLight = root.classList.toggle('light');
+                try {
+                    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                } catch (e) { /* storage disabled: the choice just won't persist */ }
+                sync();
+            });
+
+            // Follow the OS until the visitor makes an explicit choice.
+            media.addEventListener('change', function (e) {
+                try {
+                    if (localStorage.getItem('theme')) return;
+                } catch (err) { /* unreadable storage means no stored choice */ }
+                root.classList.toggle('light', e.matches);
+                sync();
+            });
+
+            sync();
+        })();
+    </script>
 
 </body>
 </html>
