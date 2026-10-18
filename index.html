@@ -224,6 +224,18 @@
   /* Pushes the link to the card foot so all cards align regardless of copy length. */
   .project-link { margin-top: auto; padding-top: 14px; font-size: 15px; font-weight: 500; color: #2997ff; }
 
+  /* ---------- Clients ---------- */
+  .client {
+    display: flex; flex-direction: column; gap: 12px;
+    color: var(--ink); transition: border-color 0.2s ease;
+  }
+  .client:hover { border-color: rgba(0, 0, 0, 0.16); }
+  .client-kicker { font-size: 12px; color: var(--ink-faint); letter-spacing: 0.04em; }
+  .client h3 { font-size: 26px; letter-spacing: -0.02em; }
+  .client p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-muted); text-wrap: pretty; }
+  /* Same foot-alignment as .project-link, in the light card's accent. */
+  .client-link { margin-top: auto; padding-top: 14px; font-size: 15px; font-weight: 500; color: var(--accent); }
+
   /* ---------- Connect ---------- */
   .connect {
     padding: 76px 22px 40px; background: var(--surface-alt);
@@ -291,6 +303,7 @@
         <a href="#skills">Skills</a>
         <a href="#teaching">Teaching</a>
         <a href="#projects">Projects</a>
+        <a href="#clients">Clients</a>
         <a href="#connect">Connect</a>
       </div>
     </div>
@@ -551,6 +564,30 @@
             <span class="chip">Privacy</span>
           </div>
           <span class="project-link">geralexgr.github.io/TowerWise →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="clients" class="section">
+    <div class="wrap">
+      <span class="eyebrow">Clients</span>
+      <h2 class="sec-h2">Who I&rsquo;ve built for.</h2>
+      <div class="cols2">
+
+        <a href="https://benchome.com/" target="_blank" rel="noreferrer" class="card client" data-reveal>
+          <span class="client-kicker">CLIENT · PROPTECH</span>
+          <h3>Benchome</h3>
+          <p>Property decision intelligence.</p>
+          <span class="client-link">benchome.com →</span>
+        </a>
+
+        <a href="https://cleanitupnp.gr/" target="_blank" rel="noreferrer" class="card client" data-reveal>
+          <span class="client-kicker">CLIENT · CLEANING SERVICES</span>
+          <h3>Clean it up</h3>
+          <p>Professional cleaning for homes and businesses in Greece.</p>
+          <span class="client-link">cleanitupnp.gr →</span>
         </a>
 
       </div>
