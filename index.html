@@ -13,7 +13,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gerasimos Alexiou — Websites, Mobile Apps &amp; Cloud | UAE</title>
-<meta name="description" content="Freelance website and mobile app developer in the UAE. Gerasimos Alexiou builds websites, iOS &amp; Android apps and AI agents, backed by 8+ years as a Senior Cloud/DevOps Engineer and former Microsoft MVP.">
+<meta name="description" content="Freelance website and mobile app developer in the UAE. Gerasimos Alexiou builds websites, iOS &amp; Android apps and AI agents. Senior Cloud/DevOps Engineer working in IT since 2018 and former Microsoft MVP.">
 <link rel="canonical" href="https://geralexgr.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Gerasimos Alexiou">
@@ -25,7 +25,7 @@
 <meta property="og:url" content="https://geralexgr.com/">
 <meta property="og:site_name" content="Gerasimos Alexiou">
 <meta property="og:title" content="Gerasimos Alexiou — Websites, Mobile Apps &amp; Cloud">
-<meta property="og:description" content="I build websites, iOS &amp; Android apps and AI agents for businesses in the UAE and worldwide, backed by 8+ years of cloud engineering.">
+<meta property="og:description" content="I build websites, iOS &amp; Android apps and AI agents for businesses in the UAE and worldwide, backed by cloud engineering experience since 2018.">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@geralexgr">
@@ -85,11 +85,6 @@
       "@type": "FAQPage",
       "@id": "https://geralexgr.com/#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do you work with clients outside the UAE?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. I am based in the UAE and work remotely with clients in the UAE, Greece and elsewhere." }
-        },
         {
           "@type": "Question",
           "name": "Can you build both the website and the mobile app?",
@@ -480,17 +475,17 @@
     <div class="hero-inner">
       <div class="badge" data-reveal>
         <span class="badge-dot"></span>
-        Taking on new projects · Former Microsoft MVP · Senior DevOps Engineer
+        Senior Cloud/DevOps Engineer · Former Microsoft MVP
       </div>
       <h1 class="hero-h1" data-reveal>Hi, I&rsquo;m<br>Gerasimos Alexiou</h1>
-      <p class="hero-sub" data-reveal>I build <strong>websites, iOS &amp; Android apps and AI agents</strong> for businesses in the UAE and worldwide, backed by 8+ years as a Senior Cloud/DevOps Engineer running infrastructure for millions of users.</p>
+      <p class="hero-sub" data-reveal>I build <strong>websites, iOS &amp; Android apps and AI agents</strong> for businesses in the UAE and worldwide, backed by <span data-years-since="2018">8</span>+ years as a Senior Cloud/DevOps Engineer running infrastructure for millions of users.</p>
       <div class="hero-actions" data-reveal>
         <a href="#start" class="btn btn-primary" data-cta="hero">Start a project</a>
         <a href="#projects" class="btn btn-ghost">See my work</a>
       </div>
       <div class="stats" data-reveal>
         <div class="stat"><span class="stat-value">300k+</span><span class="stat-label">blog views</span></div>
-        <div class="stat"><span class="stat-value">8+ yrs</span><span class="stat-label">in IT &amp; cloud</span></div>
+        <div class="stat"><span class="stat-value"><span data-years-since="2018">8</span>+ yrs</span><span class="stat-label">in IT &amp; cloud</span></div>
         <div class="stat"><span class="stat-value">2</span><span class="stat-label">Udemy courses</span></div>
       </div>
     </div>
@@ -742,7 +737,7 @@
         <a href="https://tradeloo.app" target="_blank" rel="noreferrer" class="project" data-reveal>
           <span class="project-kicker">SIDE PROJECT · SAAS</span>
           <h3>Tradeloo</h3>
-          <p>Crypto tools for retail traders.</p>
+          <p>Bitcoin cycle chart and market tools for traders. Every cycle top and bottom since 2013 on one log-scale chart, plus live BTC charts, historic monthly returns, funding rates, Fear &amp; Greed sentiment and red news days.</p>
           <div class="chips">
             <span class="chip">Trading Journal</span>
             <span class="chip">Trading</span>
@@ -838,7 +833,7 @@
         <h2>Let&rsquo;s build your website or app.</h2>
         <p>Tell me what you need and I&rsquo;ll get back to you with ideas and a quote.</p>
         <div class="hero-actions">
-          <a href="https://www.linkedin.com/in/geralexgr/" target="_blank" rel="noreferrer" class="btn btn-primary" data-cta="linkedin">Message me on LinkedIn</a>
+          <a href="#start" class="btn btn-primary" data-email data-cta="email">Email me</a>
           <a href="#services" class="btn btn-ghost">See services</a>
         </div>
       </div>
@@ -850,10 +845,6 @@
       <span class="eyebrow">FAQ</span>
       <h2 class="sec-h2">Good questions.</h2>
       <div class="faq">
-        <details class="card">
-          <summary>Do you work with clients outside the UAE?</summary>
-          <p>Yes. I am based in the UAE and work remotely with clients in the UAE, Greece and elsewhere.</p>
-        </details>
         <details class="card">
           <summary>Can you build both the website and the mobile app?</summary>
           <p>Yes. I build websites and native-feeling iOS and Android apps, and I can also set up the cloud backend, hosting and CI/CD behind them.</p>
@@ -878,6 +869,9 @@
         <h2>Say hello.</h2>
       </div>
       <div class="links">
+        <a href="#connect" class="link-card" data-email data-cta="footer-email">
+          <span class="link-label">Email</span><span class="link-value">Send me a message</span>
+        </a>
         <a href="https://github.com/geralexgr" target="_blank" rel="noreferrer" class="link-card">
           <span class="link-label">GitHub</span><span class="link-value">geralexgr</span>
         </a>
@@ -904,6 +898,23 @@
   <script>
     (function () {
       document.body.classList.remove('no-js');
+
+      // Years of experience, counted from 2018 so the number updates itself every January.
+      var years = new Date().getFullYear() - 2018;
+      document.querySelectorAll('[data-years-since]').forEach(function (el) {
+        el.textContent = years;
+      });
+
+      // The email address never appears in the HTML: it is put together in reverse
+      // only when someone clicks, so scrapers reading the page source can't harvest it.
+      document.querySelectorAll('[data-email]').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var parts = ['moc.rgxelareg', 'retsambew'].map(function (s) {
+            return s.split('').reverse().join('');
+          });
+          el.href = 'mailto:' + parts[1] + '@' + parts[0] + '?subject=' + encodeURIComponent('New project enquiry');
+        });
+      });
 
       // Report "Start a project" / contact clicks to Google so leads can be measured.
       // To count them as Google Ads conversions, add send_to: 'AW-967001058/<label>'.
