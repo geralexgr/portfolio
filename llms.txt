@@ -1,0 +1,37 @@
+# Gerasimos Alexiou
+
+> Freelance website and mobile app developer based in the UAE. Gerasimos Alexiou builds business websites, iOS and Android apps, and AI agents for businesses, and consults on cloud and DevOps (AWS, Azure, Terraform, Kubernetes, CI/CD). He has worked in IT since 2018, is a Senior Cloud/DevOps Engineer, a former Microsoft MVP and a Microsoft Certified Trainer.
+
+## Services
+
+- Websites: fast, SEO-ready business websites and landing pages, with hosting, domain and analytics set up.
+- Mobile apps: iOS and Android apps from first prototype to App Store and Google Play release.
+- AI agents and automation: AI assistants and agents that answer customers, process documents and automate repetitive work.
+- Cloud and DevOps consulting: AWS and Azure architecture, Terraform, Kubernetes and CI/CD pipelines.
+
+## How projects work
+
+- Free intro call to discuss the idea, goals and budget.
+- Fixed quote with scope, timeline and price before any work starts.
+- Regular clickable previews during design and build.
+- Launch on the web or app stores, with optional ongoing support.
+- The client owns the domain, hosting, app store accounts and source code.
+
+## Work
+
+- [Tradeloo](https://tradeloo.app): Bitcoin cycle chart and market tools for traders (SaaS).
+- [MoneyTurtle](https://geralexgr.github.io/moneyturtle/index.html): privacy-first, offline expense tracker for iOS and Android.
+- [TowerWise](https://geralexgr.github.io/TowerWise/): apartment advisor for Dubai that scores ~4,600 towers on noise, transit and daily life.
+
+## Clients
+
+- [Benchome](https://benchome.com/): property decision intelligence.
+- [Clean it up](https://cleanitupnp.gr/): professional cleaning for homes and businesses in Greece.
+
+## Contact
+
+- [Website and project enquiries](https://geralexgr.com/#start)
+- [LinkedIn](https://linkedin.com/in/geralexgr)
+- [GitHub](https://github.com/geralexgr)
+- [Blog](https://blog.geralexgr.com)
+- [YouTube](https://www.youtube.com/@geralexgr)

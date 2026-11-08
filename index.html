@@ -39,6 +39,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://geralexgr.com/#website",
+      "url": "https://geralexgr.com/",
+      "name": "Gerasimos Alexiou",
+      "description": "Freelance website, mobile app and AI agent developer in the UAE.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://geralexgr.com/#person" },
+      "about": { "@id": "https://geralexgr.com/#service" }
+    },
+    {
       "@type": "Person",
       "@id": "https://geralexgr.com/#person",
       "name": "Gerasimos Alexiou",
@@ -46,6 +56,8 @@
       "jobTitle": "Senior Cloud/DevOps Engineer",
       "description": "Senior Cloud/DevOps Engineer, former Microsoft MVP and Microsoft Certified Trainer who builds websites, mobile apps and AI agents.",
       "address": { "@type": "PostalAddress", "addressCountry": "AE" },
+      "award": ["Microsoft Most Valuable Professional (MVP)"],
+      "hasCredential": { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified Trainer" },
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "National Technical University of Athens" },
         { "@type": "CollegeOrUniversity", "name": "University of Patras" }
@@ -64,7 +76,10 @@
       "@id": "https://geralexgr.com/#service",
       "name": "Gerasimos Alexiou — Websites, Mobile Apps & Cloud",
       "url": "https://geralexgr.com/",
+      "description": "Freelance website design and development, iOS and Android app development, AI agents and automation, and cloud/DevOps consulting for businesses.",
       "founder": { "@id": "https://geralexgr.com/#person" },
+      "provider": { "@id": "https://geralexgr.com/#person" },
+      "address": { "@type": "PostalAddress", "addressCountry": "AE" },
       "areaServed": [
         { "@type": "Country", "name": "United Arab Emirates" },
         { "@type": "Country", "name": "Greece" },
