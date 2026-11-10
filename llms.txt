@@ -20,8 +20,8 @@
 ## Work
 
 - [Tradeloo](https://tradeloo.app): Bitcoin cycle chart and market tools for traders (SaaS).
-- [MoneyTurtle](https://geralexgr.github.io/moneyturtle/index.html): privacy-first, offline expense tracker for iOS and Android.
-- [TowerWise](https://geralexgr.github.io/TowerWise/): apartment advisor for Dubai that scores ~4,600 towers on noise, transit and daily life.
+- [MoneyTurtle](https://moneyturtle.app): privacy-first, offline expense tracker for iOS and Android.
+- [TowerWise](https://towerwise.app): apartment advisor for Dubai that scores ~4,600 towers on noise, transit and daily life.
 
 ## Clients
 
