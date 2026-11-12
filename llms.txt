@@ -22,6 +22,7 @@
 - [Tradeloo](https://tradeloo.app): Bitcoin cycle chart and market tools for traders (SaaS).
 - [MoneyTurtle](https://moneyturtle.app): privacy-first, offline expense tracker for iOS and Android.
 - [TowerWise](https://towerwise.app): apartment advisor for the UAE that scores ~8,700 towers across five emirates on noise, transit and daily life.
+- [Pastfolio](https://pastfolio.app): educational tool that teaches investing through 155 years of S&P 500 history, with crash replays, a what-if simulator and short data-backed lessons.
 
 ## Clients
 
